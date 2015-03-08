@@ -17,7 +17,7 @@ Exit console by typing `\q`
 
 **Copy database.yml.sample to database.yml and fill in the password you chose earlier.**
 
-Run `bundle install`
+Run `bundle install`  
 Then `rake db:reseed` to populate development environment with example data.
 
 # Gem dependencies
@@ -25,7 +25,7 @@ Then `rake db:reseed` to populate development environment with example data.
 [Webkit as js driver for cabypara](https://github.com/thoughtbot/capybara-webkit/wiki/Installing-Qt-and-compiling-capybara-webkit)
 
 # Credentials
-Seeds have a user already created for you.
+Seeds have a user already created for you.  
 `admin@example.com` with password `12345678`
 
 # Run
