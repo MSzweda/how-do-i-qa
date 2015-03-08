@@ -7,7 +7,7 @@ FORK THE PROJECT!
 
 We're using postgres. Make sure it's running :)
 
-Ubuntu: `sudo -u postgres psql template1`
+Ubuntu: `sudo -u postgres psql template1`  
 OSX: `psql template1`
 
 **Fill in your desired password** in the `db/development_setup_script.sql` - if you leave it empty you might have to [change your hba_conf](https://gist.github.com/p1nox/4953113).
