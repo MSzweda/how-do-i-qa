@@ -20,6 +20,6 @@
           First row, selector: first(:xpath, '//table//tr') or first('table tr')
       %tr
         %td
-          Last row, selector: last(:xpath, '//table//tr') or last('table tr')
+          Last row, selector: all('table tr').last
 
 = render 'common/footer', next_link: test_4_pages_path
