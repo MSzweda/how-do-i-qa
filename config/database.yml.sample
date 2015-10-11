@@ -2,7 +2,7 @@ defaults: &defaults
   adapter: postgresql
   host: localhost
   username: howdoiqa
-  password: <YOUR PASSWORD HERE>
+  password: howdoiqa
 
 development:
   <<: *defaults
