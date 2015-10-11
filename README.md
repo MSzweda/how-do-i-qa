@@ -26,7 +26,7 @@ If you want to change any of the information in there you will need to change it
 In the pql console run: `\i <PATH_TO_PROJECT>/db/development_setup_script.sql`  
 Exit console by typing `\q`  
 
-**Copy database.yml.sample to database.yml**:
+**Copy database.yml.sample to database.yml**:  
 `cp config/database.yml.sample config/database.yml`  
 
 Run `bundle install`  
