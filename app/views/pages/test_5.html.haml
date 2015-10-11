@@ -5,15 +5,40 @@
   %h3 Your task
   %p
     Write a spec for page that requires authentication.
-    Don't log the user in, stub the required methods instead and return an object you create in spec.
-    Check if your user's email displays on the page.
-    Which method checks that user is authenticated? Stub it.
-    You need a user object, devise uses current_user - stub it.
+  %p
+    Steps:
+    %ul
+      %li There are two ways of achieving this.
+      %li First - you can create a user via a factory and then log in via filling the form with the data you created in the factory.
+      %li Second - you can use stubbing to provide the controller with the data it requires after login.
+  %p
+    Steps for first method:
+    %ul
+      %li Create a user using a factory - provide email and password.
+      %li Using that email and password fill in the form and click on the signin button.
+      %li Then check that you're on this page by searching that your user's email displays on the page.
+  %p
+    Steps for second method (this is faster to run and what we use daily in our specs):
+    %ul
+      %li Create a user using a factory - provide email and password.
+      %li Locate the controller used to display this page - check in 'app/controllers' or compare this page's url with output from 'rake routes'.
+      %li Look at the filters in this controller - see anything that could be responsible for forcing user authentication?
+      %li We're using devise for user management, that means we will also need the current_user method to return our user.
+      %li
+        You want to write two lines in a 'before' block in the spec:
+        %ul
+          %li one to force controller into thinking we're already authenticated - find the filter and return true
+          %li one to force controller to return the user we've created via a factory - return the user you created earlier as a stub for the current_user method
+      %li The general syntax for stubs like that is as follows: 'allow_any_instance_of(<SOME CLASS NAME>).to receive(<METHOD NAME AS SYMBOL>).and_return(<YOUR VALUE>)'
+      %li Here's an example: 'allow_any_instance_of(ApplicationController).to receive(:verify_authenticity_token).and_return(true)'
+      %li After stubbing those two methods you should visit the page - you will see you don't need to log in via a form.
   %h3 Things we learn in this step:
   %p
     %ul
       %li= link_to 'stubs on any instance of a class', 'http://www.rubydoc.info/github/rspec/rspec-mocks/RSpec/Mocks/ExampleMethods%3aallow_any_instance_of'
       %li= link_to 'creating a resource object using a factory', 'http://www.rubydoc.info/gems/factory_girl/file/GETTING_STARTED.md#Defining_factories'
+      %li= link_to 'before blocks', 'https://www.relishapp.com/rspec/rspec-core/v/2-2/docs/hooks/before-and-after-hooks'
+      %li= link_to 'creating variables', 'http://betterspecs.org/#let'
   %h2 Subject of test:
   %p
     This is current user's email:

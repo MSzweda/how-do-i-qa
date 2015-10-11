@@ -6,9 +6,22 @@
   %p
     Define a factory for the SomeModule::Country, use it in spec and check if the data displays on this page. Page also shouldn't throw an error if no countries are present.
   %p
+    Steps:
+    %ul
+      %li Create a new file in the `spec/factories` directory - name it `countries.rb`
+      %li Country has a 'name' (e.g. 'Poland') and 'code' (e.g. 'PL')
+      %li Define this factory.
+      %li
+        Create two scenarios in the spec:
+        %ul
+          %li a) country doesn't exist in database - what will be displayed in that case?
+          %li b) country exists - check that the data displays like you can see below in the 'Subject of test' section
+      %li For scenario b) make sure that the country is created before visiting the page - do you know the difference between 'let' and 'let!'? :)
+  %p
     %h3 Things we learn in this step:
     %ul
       %li= link_to 'specifying class in factories', 'https://github.com/thoughtbot/factory_girl/blob/master/GETTING_STARTED.md#defining-factories'
+      %li= link_to 'let vs let!', 'https://www.relishapp.com/rspec/rspec-core/v/2-11/docs/helper-methods/let-and-let'
   %h2 Subject of test:
   %p
     This is the data we have on countries currently:

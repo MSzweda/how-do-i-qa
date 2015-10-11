@@ -5,9 +5,17 @@
   %h3 Your task
   %p
     Write a test that clicks the correct button.
+  %p
+    Steps:
+    %ul
+      %li Right click the button and choose 'inspect'.
+      %li This button sits in a different div than the other one - you can use this information to select the correct button.
+      %li Click the correct 'Next' button.
+      %li Check that the next page contains some text that's unique to it.
   %h3 Things we learn in this step:
   %p
     %ul
+      %li Inspecting the html source.
       %li= link_to 'capybara\'s within method', 'https://github.com/jnicklas/capybara#scoping'
   %h2 Subject of test:
   %p
