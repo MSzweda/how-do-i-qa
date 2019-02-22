@@ -6,7 +6,7 @@ require 'rspec/rails'
 Capybara.javascript_driver = :webkit
 
 RSpec.configure do |config|
-  config.include FactoryGirl::Syntax::Methods
+  config.include FactoryBot::Syntax::Methods
 
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
 
