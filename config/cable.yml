@@ -7,3 +7,4 @@ test:
 production:
   adapter: redis
   url: redis://localhost:6379/1
+  channel_prefix: how_do_i_qa_production

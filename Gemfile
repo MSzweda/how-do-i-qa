@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '5.0.2'
+gem 'rails', '5.1.7'
 gem 'pg', "0.20"
 gem 'sass-rails'
 gem 'uglifier'
