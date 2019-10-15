@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.2.11'
-gem 'pg', "~> 0.18"
+gem 'rails', '5.0.1'
+gem 'pg', "0.20"
 gem 'sass-rails'
 gem 'uglifier'
 gem 'coffee-rails'
@@ -31,7 +31,6 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'pry'
   gem 'pry-rails'
-  gem 'quiet_assets'
   gem 'rspec-rails'
   gem 'spring-commands-rspec'
 end
