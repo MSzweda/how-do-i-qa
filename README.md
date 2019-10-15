@@ -15,7 +15,7 @@ Prerequisites:
 - Postgres (9.5.14 is safe - install via Homebrew or use Postgres app)
 
 ## Gem dependencies
-- capybara webkit driver (you will need QT)
+- Capybara Webkit driver (you will need QT)
 [Webkit as js driver for capybara](https://github.com/thoughtbot/capybara-webkit/wiki/Installing-Qt-and-compiling-capybara-webkit)
 
 # Database setup
@@ -42,6 +42,7 @@ Load test database with `rake db:test:load`.
 
 # Credentials
 **Seeds have a user already created for you.**
+
 `admin@example.com` with password `12345678`
 
 # Run
