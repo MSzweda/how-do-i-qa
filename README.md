@@ -6,15 +6,21 @@ FORK THE PROJECT!
 # Dependencies
 **Download and set these up first.**
 
-- ruby 2.4.1
-- postgres
+Prerequisites:
+- XCode (from Appstore)
+- Homebrew
+- Ruby version manager - RVM or asdf (asdf config is available in `.tool-versions` file) - it's not really required, but it will make your life easier
+
+- Ruby 2.6.3
+- Postgres (9.5.14 is safe - install via Homebrew or use Postgres app)
 
 ## Gem dependencies
 - capybara webkit driver (you will need QT)
-[Webkit as js driver for cabypara](https://github.com/thoughtbot/capybara-webkit/wiki/Installing-Qt-and-compiling-capybara-webkit)
+[Webkit as js driver for capybara](https://github.com/thoughtbot/capybara-webkit/wiki/Installing-Qt-and-compiling-capybara-webkit)
 
 # Database setup
-We're using postgres. Make sure it's running :) Then log in to template with this command line:
+We're using postgres. Make sure it's running (you can check with `brew services list`, if you use Homebrew) :)
+Then log in to template with this command line:
 
 Ubuntu: `sudo -u postgres psql template1`
 OSX: `psql template1`
@@ -39,7 +45,9 @@ Load test database with `rake db:test:load`.
 `admin@example.com` with password `12345678`
 
 # Run
-`rails s`
+`bundle exec rails s`
+
+(`bundle exec` uses gems from your project, not global for your machine)
 
 # Run specs (if any)
-`rspec spec`
+`bundle exec rspec spec`
