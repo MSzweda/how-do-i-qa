@@ -18,6 +18,7 @@ gem 'bootstrap-sass'
 gem 'simple_form'
 gem 'devise'
 gem 'sprig'
+gem 'sprockets', '~>3.0'
 
 group :development, :test do
   gem 'bogus', require: false
