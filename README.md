@@ -48,7 +48,7 @@ Load test database with `rake db:test:load`.
 # Run
 `bundle exec rails s`
 
-(`bundle exec` uses gems from your project, not global for your machine)
+(`bundle exec` uses gems from your project, not global for your machine - if any of the above commands don't work, try with bundle exec)
 
 # Run specs (if any)
 `bundle exec rspec spec`
