@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
-  skip_before_filter :verify_authenticity_token, only: [:test_4]
-  before_filter :authenticate_user!, only: [:test_5]
+  skip_before_action :verify_authenticity_token, only: [:test_4]
+  before_action :authenticate_user!, only: [:test_5]
 
   def test_0
   end

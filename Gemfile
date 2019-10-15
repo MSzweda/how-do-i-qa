@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.2.11'
-gem 'pg', "~> 0.18"
+gem 'rails', '5.2.3'
+gem 'pg', "0.20"
 gem 'sass-rails'
 gem 'uglifier'
 gem 'coffee-rails'
@@ -18,6 +18,7 @@ gem 'bootstrap-sass'
 gem 'simple_form'
 gem 'devise'
 gem 'sprig'
+gem 'sprockets', '~>3.0'
 
 group :development, :test do
   gem 'bogus', require: false
@@ -30,7 +31,6 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'pry'
   gem 'pry-rails'
-  gem 'quiet_assets'
   gem 'rspec-rails'
   gem 'spring-commands-rspec'
 end
